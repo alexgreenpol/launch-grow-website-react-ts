@@ -1,0 +1,8 @@
+@import "../../assets/styles/helpers/variables.scss";
+@import "../../assets/styles/helpers/mixins.scss";
+
+.image-box {
+    border-radius: 20px;
+    overflow: hidden;
+    line-height: 0;
+}

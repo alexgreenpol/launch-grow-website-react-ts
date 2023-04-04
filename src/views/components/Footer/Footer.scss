@@ -1,0 +1,32 @@
+@import "../../assets/styles/helpers/variables.scss";
+@import "../../assets/styles/helpers/mixins.scss";
+
+.site-footer {
+    &__widget-title {
+        margin-bottom: 40px;
+    }
+
+    &__logo {
+        max-width: 120px;
+    }
+
+    &__quote {
+        max-width: 400px;
+        margin: 40px 0;
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 1.2rem;
+
+        & a {
+            color: $core-white-color;
+
+            &:hover {
+                color: $core-primary-color;
+            }
+        }
+    }
+}

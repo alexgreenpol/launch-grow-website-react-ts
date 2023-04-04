@@ -1,0 +1,42 @@
+@import "../../assets/styles/helpers/variables.scss";
+@import "../../assets/styles/helpers/mixins.scss";
+
+.simple-slider {
+    & .slick-list {
+        max-width: 1000px;
+        margin: 0 auto;
+
+        @include breakpoint(min-width, tablet) {
+            width: 80%;
+        }
+    }
+
+    & .slick-arrow {
+        width: 40px;
+        height: 24px;
+        z-index: 10;
+
+        @include breakpoint(min-width, tablet) {
+            width: 50px;
+            height: 50px;
+        }
+
+        &:before {
+            color: $core-primary-color;
+            font-size: 1.5rem;
+            opacity: 1;
+
+            @include breakpoint(min-width, tablet) {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    & .slick-next {
+        right: 0;
+    }
+
+    & .slick-prev {
+        left: 0;
+    }
+}

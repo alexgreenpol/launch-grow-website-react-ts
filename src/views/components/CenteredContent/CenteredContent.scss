@@ -1,0 +1,14 @@
+@import "../../assets/styles/helpers/variables.scss";
+@import "../../assets/styles/helpers/mixins.scss";
+
+.centered-content {
+    text-align: center;
+
+    & .heading-block {
+        margin-bottom: 60px;
+    }
+
+    & *:last-child {
+        margin-bottom: 0;
+    }
+}

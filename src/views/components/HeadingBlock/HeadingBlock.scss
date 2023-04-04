@@ -1,0 +1,12 @@
+@import "../../assets/styles/helpers/variables.scss";
+@import "../../assets/styles/helpers/mixins.scss";
+
+.heading-block {
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    & .btn {
+        margin-top: 40px;
+    }
+}

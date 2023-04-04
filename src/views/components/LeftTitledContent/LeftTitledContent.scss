@@ -1,0 +1,21 @@
+@import "../../assets/styles/helpers/variables.scss";
+@import "../../assets/styles/helpers/mixins.scss";
+
+.left-titled-content {
+    &__main {
+        padding-left: 0;
+
+        @include breakpoint(min-width, tablet) {
+            padding-left: 80px;
+        }
+    }
+
+    &.videocontent .video-box {
+        display: flex;
+        justify-content: flex-end;
+
+        & video {
+            max-height: 600px;
+        }
+    }
+}

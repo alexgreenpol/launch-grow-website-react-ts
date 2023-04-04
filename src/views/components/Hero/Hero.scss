@@ -1,0 +1,52 @@
+@import "../../assets/styles/helpers/variables.scss";
+@import "../../assets/styles/helpers/mixins.scss";
+
+.hero {
+    position: relative;
+    padding: 50px 0 150px 0;
+
+    &:before {
+        content: "";
+        height: 1px;
+        background-color: $core-black-color;
+        position: absolute;
+        bottom: 75px;
+        left: 0;
+        right: 0;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+
+        & > *:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__decor {
+        position: absolute;
+        bottom: 55px;
+        background-color: $core-grey-color;
+        display: inline-block;
+        padding: 10px 15px;
+        text-transform: uppercase;
+        color: $core-primary-color;
+
+        @include breakpoint(min-width, tablet) {
+            font-size: 1.2rem;
+            bottom: 52px;
+        }
+
+        &--left {
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+
+        &--right {
+            right: 8%;
+        }
+    }
+}

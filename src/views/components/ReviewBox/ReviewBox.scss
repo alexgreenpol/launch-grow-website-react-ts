@@ -1,0 +1,52 @@
+@import "../../assets/styles/helpers/variables.scss";
+@import "../../assets/styles/helpers/mixins.scss";
+
+.review-box {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    max-width: 1000px;
+    border-radius: 20px;
+    margin: 0 auto;
+    text-align: left;
+
+    @include breakpoint(min-width, tablet) {
+        flex-direction: row;
+    }
+
+    &__person {
+        padding: 20px 40px;
+        border-right: 1px solid $core-black-color;
+
+        @include breakpoint(min-width, tablet) {
+            flex-basis: 300px;
+            padding: 40px;
+        }
+
+        & img {
+            border-radius: 20px;
+            margin-bottom: 20px;
+            display: none;
+
+            @include breakpoint(min-width, tablet) {
+                display: block;
+            }
+        }
+
+        &-name {
+            font-weight: 900;
+            font-size: 1.2rem;
+        }
+    }
+
+    &__text {
+        padding: 20px 40px;
+        font-style: italic;
+
+        @include breakpoint(min-width, tablet) {
+            font-size: 1.2rem;
+            flex-basis: calc(100% - 300px);
+            padding: 40px;
+        }
+    }
+}

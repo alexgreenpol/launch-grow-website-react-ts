@@ -1,0 +1,58 @@
+@import "../../assets/styles/helpers/variables.scss";
+@import "../../assets/styles/helpers/mixins.scss";
+
+.site-header {
+    background-color: $core-grey-color;
+    border-bottom: 1px solid $core-black-color;
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+
+        @include breakpoint(min-width, tablet) {
+            justify-content: flex-start;
+        }
+
+        & img {
+            max-width: 100px;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        height: 100%;
+        padding: 20px 0;
+
+        @include breakpoint(min-width, tablet) {
+            gap: 30px;
+            padding: 0;
+        }
+
+        & a {
+            text-transform: uppercase;
+            color: $core-black-color;
+
+            &.active {
+                color: $core-primary-color;
+            }
+
+            &:hover {
+                color: $core-primary-color;
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        @include breakpoint(min-width, tablet) {
+            justify-content: flex-end;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@import "../../assets/styles/helpers/variables.scss";
+@import "../../assets/styles/helpers/mixins.scss";
+
+.video-box {
+    border-radius: 20px;
+    overflow: hidden;
+    line-height: 0;
+
+    & video {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+}

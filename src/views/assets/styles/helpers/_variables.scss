@@ -1,0 +1,34 @@
+// Colors
+$core-primary-color: #8bc781;
+$core-secondary-color: #475075;
+$core-secondary-dark-color: #384062;
+$core-black-color: #303030;
+$core-white-color: #ffffff;
+$core-grey-color: #f5f5f5;
+$core-milk-color: #f3ede2;
+$core-dark-grey-color: #767474;
+$core-red-color: #e66d67;
+
+// Fonts
+
+$f-weight-regular: 400;
+$f-weight-bold: 600;
+$f-weight-extra-bold: 700;
+
+// Sizes
+
+$mobile: 568px;
+$tablet: 768px;
+$desktop: 1024px;
+$mediumDesktop: 1280px;
+$largeDesktop: 1920px;
+
+// Breakpoints
+
+$breakpoints: (
+    mobile: 568px,
+    tablet: 768px,
+    desktop: 1024px,
+    mediumDesktop: 1280px,
+    largeDesktop: 1920px,
+);

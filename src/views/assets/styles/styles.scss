@@ -1,0 +1,140 @@
+@import "./helpers/reset";
+@import "./helpers/fonts";
+@import "./helpers/mixins";
+@import "./helpers/typography";
+@import "./helpers/variables";
+
+body {
+    font-size: 16px;
+    color: $core-black-color;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: $core-grey-color;
+}
+
+.pd--xl {
+    padding: 100px 20px;
+}
+
+.pd--l {
+    padding: 70px 20px;
+}
+
+.pd--m {
+    padding: 50px 20px;
+}
+
+.pd--s {
+    padding: 30px 20px;
+}
+
+.pd--xs {
+    padding: 15px;
+}
+
+.pb-0 {
+    padding-bottom: 0;
+}
+
+.pt-0 {
+    padding-top: 0;
+}
+
+a {
+    color: $core-primary-color;
+    text-decoration: none;
+}
+
+a:hover {
+    color: $core-secondary-color;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+
+    &--fullwidth {
+        max-width: 100%;
+    }
+
+    &--xl {
+        max-width: $largeDesktop;
+    }
+
+    &--l {
+        max-width: $mediumDesktop;
+    }
+
+    &--m {
+        max-width: $desktop;
+    }
+
+    &--s {
+        max-width: $tablet;
+    }
+
+    &--xs {
+        max-width: $mobile;
+    }
+}
+
+.bg {
+    &--primary {
+        background-color: $core-primary-color;
+
+        &.review-box {
+            color: $core-black-color;
+        }
+    }
+
+    &--secondary {
+        background-color: $core-secondary-color;
+        color: $core-white-color;
+
+        & + .bg--secondary,
+        &:last-child {
+            border-top: 1px solid $core-black-color;
+        }
+    }
+
+    &--secondary-dark {
+        background-color: $core-secondary-dark-color;
+
+        &.review-box {
+            color: $core-primary-color;
+        }
+    }
+
+    &--milk {
+        background-color: $core-milk-color;
+
+        & + .bg--milk {
+            border-top: 1px solid $core-dark-grey-color;
+        }
+
+        & .content-label {
+            color: $core-dark-grey-color;
+        }
+
+        &.review-box {
+            color: $core-black-color;
+        }
+    }
+
+    &--grey {
+        background-color: #f5f5f5;
+
+        &.review-box {
+            color: $core-black-color;
+        }
+    }
+}
+
+.content-label {
+    display: inline-block;
+    text-transform: uppercase;
+    color: $core-primary-color;
+    margin-bottom: 30px;
+}

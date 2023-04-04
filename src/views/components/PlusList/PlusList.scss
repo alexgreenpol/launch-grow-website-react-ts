@@ -1,0 +1,22 @@
+@import "../../assets/styles/helpers/variables.scss";
+@import "../../assets/styles/helpers/mixins.scss";
+
+.plus-list {
+    &__item {
+        padding: 10px 40px;
+        border-bottom: 1px solid #cac4b8;
+        position: relative;
+
+        &:before {
+            content: "";
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0, -50%);
+            background-image: url("../../assets/images/icons/icon-plus.svg");
+            background-repeat: no-repeat;
+        }
+    }
+}

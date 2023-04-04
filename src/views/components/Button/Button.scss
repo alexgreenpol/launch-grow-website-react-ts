@@ -1,0 +1,98 @@
+@import "../../assets/styles/helpers/variables.scss";
+@import "../../assets/styles/helpers/mixins.scss";
+
+.btn {
+    display: inline-block;
+    border-radius: 5px;
+    overflow: hidden;
+    transform: translateZ(0);
+    border: solid 1px $core-black-color;
+    padding: 0 38px 0 0;
+    background-color: $core-primary-color;
+    position: relative;
+    box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.12);
+    max-width: fit-content;
+
+    & .text {
+        color: $core-black-color;
+        background-color: $core-white-color;
+        font-size: 15px;
+        line-height: 1;
+        display: block;
+        padding: 18px 30px;
+        position: relative;
+
+        &:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #8bc781;
+            transform: scaleX(0);
+            transform-origin: right center;
+            transition: all 0.5s cubic-bezier(0.5, 0, 0.5, 1);
+        }
+
+        & .relative {
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    & .arrow {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        width: 40px;
+        height: 100%;
+        background-color: $core-primary-color;
+        border-left: 1px solid $core-black-color;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: stretch;
+
+        svg {
+            width: 15px;
+            overflow: visible;
+            transform: translateZ(0);
+        }
+
+        & .arrow-path {
+            transition: all 0.5s cubic-bezier(0.5, 0, 0.5, 1);
+
+            & path,
+            & line {
+                fill: none;
+                stroke: $core-black-color;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-width: 1.5px;
+            }
+
+            & .stem {
+                stroke-dasharray: 24px;
+                stroke-dashoffset: 12px;
+                transition: all 0.5s cubic-bezier(0.5, 0, 0.5, 1);
+            }
+        }
+    }
+
+    &:hover {
+        & .text:before {
+            transform: scaleX(1);
+        }
+
+        & .arrow-path {
+            transform: translateX(6px);
+
+            & .stem {
+                stroke-dashoffset: 0px;
+            }
+        }
+    }
+}

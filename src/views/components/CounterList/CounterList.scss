@@ -1,0 +1,39 @@
+@import "../../assets/styles/helpers/variables.scss";
+@import "../../assets/styles/helpers/mixins.scss";
+
+.counter-list {
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 40px;
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        flex-basis: 100%;
+
+        @include breakpoint(min-width, tablet) {
+            flex-basis: calc(50% - 40px);
+        }
+    }
+
+    &__content {
+        flex-basis: calc(100% - 70px);
+        padding-left: 40px;
+    }
+
+    &__icon {
+        flex-basis: 70px;
+
+        & img {
+            width: 70px;
+            height: 70px;
+        }
+    }
+
+    &__title {
+        margin: 20px 0;
+    }
+}
